@@ -11,7 +11,7 @@ public class HomePage extends AbstractMain{
 		return By.xpath("//span[contains(text(),'"+topNavItemName+"')]/../..//a");
 	}
 	public String isLatestNewsSectionDisplayed(){
-	 return	driver.findElement(LATEST_NEWS_SECTION).getText();
+	 return	driver.findElements(LATEST_NEWS_SECTION).get(2).getText();
 		
 	}
 	public void selectTopNavItem(String topNavItemName){

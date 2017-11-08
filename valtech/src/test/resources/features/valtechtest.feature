@@ -1,5 +1,5 @@
+@test
 Feature: Valtech test
-
 Scenario: Verify the Latest News is displayed in home page 
 
 Given I am in home page
@@ -27,7 +27,7 @@ Then I should see "Work" section
 Scenario: Verify the total number of Offices in COntact page 
 
 Given I am in home page
-When I select "about" from Top Nav
+When I select "About" from Top Nav
 And I select Valtech Offices link
 Then I should see and count all the valtech offices
 

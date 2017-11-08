@@ -23,7 +23,7 @@ public class HomePageStepDef extends AbstractMain{
 
     @Then("^I should see \"([^\"]*)\" section should be disply$")
     public void i_should_see_something_section_should_be_disply(String expectedSection) throws Throwable {
-    	assertThat("Latest Section is not present", homePage.isLatestNewsSectionDisplayed().contains(expectedSection));
+    	assertThat("Latest Section is not present"+"Actual:"+homePage.isLatestNewsSectionDisplayed(), homePage.isLatestNewsSectionDisplayed().equalsIgnoreCase(expectedSection));
     }
     
     @When("^I select \"([^\"]*)\" from Top Nav$")
